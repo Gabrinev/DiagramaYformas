@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiagramaYformas
 {
-    class Rombo : Formas
+    class Rombo : Forma
     {
         int diagonalMayor;
         int diagonalMenor;

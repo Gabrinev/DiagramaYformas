@@ -8,16 +8,16 @@ namespace DiagramaYformas
 {
     class Diagrama
     {
-        private List<Formas> list;
+        private List<Forma> list;
         private double perimetroTotal;
         private double areaTotal;
 
         public Diagrama()
         {
-            list = new List<Formas>();
+            list = new List<Forma>();
         }
 
-        public void añadirForma(Formas f)
+        public void añadirForma(Forma f)
         {
             list.Add(f);           
             
@@ -26,7 +26,7 @@ namespace DiagramaYformas
         public double calcTotalPerimetros()
         {
 
-            foreach (Formas f in list)
+            foreach (Forma f in list)
             {
                 perimetroTotal += f.getPerimetro();
             }
@@ -38,7 +38,7 @@ namespace DiagramaYformas
         public double calcTotalAreas()
         {
 
-            foreach (Formas f in list)
+            foreach (Forma f in list)
             {
                 areaTotal += f.getArea();
             }

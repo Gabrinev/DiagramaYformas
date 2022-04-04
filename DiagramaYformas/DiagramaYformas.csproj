@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Diagrama.cs" />
-    <Compile Include="Formas.cs" />
+    <Compile Include="Forma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangulo.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiagramaYformas
 {
-    class Rectangulo : Formas
+    class Rectangulo : Forma
     {
 
         int ladoMayor;

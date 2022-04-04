@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DiagramaYformas
 {
-    abstract class Formas
+    abstract class Forma
     {
         string color;
         string nombre;
 
-        public Formas(string c, string n)
+        public Forma(string c, string n)
         {
             color = c;
             nombre = n;
