@@ -35,6 +35,14 @@ namespace DiagramaYformas
 
         }
 
+        public double totalFormas()
+        {
+
+            
+            return list.Count();
+
+        }
+
         public double calcTotalAreas()
         {
 

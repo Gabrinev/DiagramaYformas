@@ -28,7 +28,8 @@ namespace DiagramaYformas
                         break;
                     case 3:
                         Console.WriteLine("");
-                        Console.WriteLine("Area total: "+ d.calcTotalAreas());                        
+                        Console.WriteLine("Area total: "+ d.calcTotalAreas());
+                        Console.WriteLine("");
                         Console.WriteLine("Cualquier tecla para salir...");
                         Console.ReadKey();
 
@@ -36,11 +37,20 @@ namespace DiagramaYformas
                     case 4:
                         Console.WriteLine("");
                         Console.WriteLine("Perimetro total: " + d.calcTotalPerimetros());
+                        Console.WriteLine("");
                         Console.WriteLine("Cualquier tecla para salir...");
                         Console.ReadKey();
 
                         break;
-                    
+                    case 5:
+                        Console.WriteLine("");
+                        Console.WriteLine("En el diagrama hay: " + d.totalFormas()+" formas");
+                        Console.WriteLine("");
+                        Console.WriteLine("Cualquier tecla para salir...");
+                        Console.ReadKey();
+
+                        break;
+
 
                 }
                 option = menu();
@@ -62,23 +72,23 @@ namespace DiagramaYformas
             {
                 if (i % 2 == 0)
                 {
-                    if (rand_num > 5)                    
-                        temp = new Rectangulo("rojo", "rectangulo", rd.Next(50, 100), rd.Next(1, 50));
+                    if (rand_num > 5)
+                        d.añadirForma(temp = new Rectangulo("rojo", "rectangulo", rd.Next(50, 100), rd.Next(1, 50))); 
                                            
-                    else                    
-                        temp = new Rombo("azul", "rombo", rd.Next(50, 75), rd.Next(25, 50), rd.Next(10, 25));
+                    else
+                        d.añadirForma(temp = new Rombo("rojo", "rombo", rd.Next(50, 75), rd.Next(25, 50), rd.Next(10, 25)));
                       
                 }
                 else 
                 {
-                    if (rand_num > 5)
+                    if (rand_num < 5)
                     {
-                        temp = new Rectangulo("azul", "rectangulo", rd.Next(50, 100), rd.Next(1, 50));
-                        
+                        d.añadirForma(temp = new Rectangulo("azul", "rectangulo", rd.Next(50, 100), rd.Next(1, 50)));
+
                     }
-                    else                    
-                        temp = new Rombo("azul", "rombo", rd.Next(50, 75), rd.Next(25, 50), rd.Next(10, 25));
-                                            
+                    else
+                        d.añadirForma(temp = new Rombo("azul", "rombo", rd.Next(50, 75), rd.Next(25, 50), rd.Next(10, 25)));
+
                 }                   
             }
             Console.WriteLine("Añadidas formas correctamente");
@@ -140,6 +150,7 @@ namespace DiagramaYformas
             Console.WriteLine("Pulse 2 añadir forma manualmente");
             Console.WriteLine("Pulse 3 calcular el area total");
             Console.WriteLine("Pulse 4 calcular el perimetro total");
+            Console.WriteLine("Pulse 5 ver total de formas en el diagrama");
             Console.WriteLine("Cualquier otra tecla para salir...");
 
             int bowl; // Variable to hold number
